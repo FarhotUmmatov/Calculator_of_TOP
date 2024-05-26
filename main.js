@@ -20,3 +20,19 @@ function divide(a, b) {
 let firstNum = 3;
 let oprator = "+" 
 let secondNum = 5; 
+
+//3. Create a new function to operate
+function operate(firstNum, operator, secondNum) {
+    switch (operator) {
+        case '+':
+            return add(firstNum, secondNum);
+        case '-':
+            return subtract(firstNum, secondNum);
+        case '*':
+            return multiply(firstNum, secondNum);
+        case '/':
+            return divide(firstNum, secondNum);
+        default:
+            throw new Error("Invalid operator");
+    }
+}
