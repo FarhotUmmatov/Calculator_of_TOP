@@ -13,13 +13,13 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (b === 0) throw new Error("sorry for 0");
-        return a / b;
+    return a / b;
 }
 
 // 2. Create a variable for the first number, the operator, and the second number
-let firstNum = 3;
-let oprator = "+" 
-let secondNum = 5; 
+let firstNum = 0;
+let oprator = "" 
+let secondNum = 0; 
 
 //3. Create a new function to operate
 function operate(firstNum, operator, secondNum) {
@@ -36,3 +36,10 @@ function operate(firstNum, operator, secondNum) {
             throw new Error("Invalid operator");
     }
 }
+//4. Create the functions that populate the display when you click the number buttons. 
+const display = document.querySelector('.calculator__output');
+const keys = document.querySelectorAll('button');
+
+keys.forEach((key) => {
+    key.addEventListener('click', (e) => console.table(e.target.dataset.value));
+});
